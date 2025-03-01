@@ -1,0 +1,307 @@
+/*--------Primary Values--------*/
+/*------------------------------*/
+/*--------Mixin Values--------*/
+/*----------------------------*/
+.container {
+  max-width: 968px;
+  margin: auto;
+}
+
+@media screen and (min-width: 968px) {
+  .top-container {
+    background-color: #FFF;
+  }
+  .top-container .container {
+    width: 968px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .top-container .container .left-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  .top-container .container .left-content span {
+    cursor: pointer;
+    color: #8D94AD;
+    font: normal 1rem "Roboto", sans-serif;
+    transition: 100ms ease-in-out;
+  }
+  .top-container .container .left-content span:hover {
+    color: #CA1016;
+  }
+  .top-container .container .right-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  .top-container .container .right-content .otherSpan, .top-container .container .right-content p {
+    color: #000;
+    font: normal 1rem "Roboto", sans-serif;
+  }
+  .top-container .container .right-content span {
+    cursor: pointer;
+    color: #8D94AD;
+    font: normal 1rem "Roboto", sans-serif;
+    transition: 100ms ease-in-out;
+  }
+  .top-container .container .right-content span i {
+    margin-right: 5px;
+  }
+  .top-container .container .right-content span:hover {
+    color: #CA1016;
+  }
+  .top-container .container .right-content a {
+    cursor: pointer;
+    color: #8D94AD;
+    font: normal 1rem "Roboto", sans-serif;
+    transition: 100ms ease-in-out;
+  }
+  .top-container .container .right-content a i {
+    margin-right: 5px;
+  }
+  .top-container .container .right-content a:hover {
+    color: #CA1016;
+  }
+  .navbar-container {
+    background-color: #CA1016;
+  }
+  .navbar-container .container {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-container .container .left-content {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-container .container .left-content .logo a {
+    color: #FFF;
+    font: 700 1.2em "Roboto", sans-serif;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .navbar-container .container .left-content .menu ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .navbar-container .container .left-content .menu ul li {
+    position: relative;
+  }
+  .navbar-container .container .left-content .menu ul li a {
+    color: #FFF;
+    font: normal 1em "Roboto", sans-serif;
+    transition: 100ms ease-in-out;
+  }
+  .navbar-container .container .left-content .menu ul li a:hover {
+    color: #d7d7d7;
+  }
+  .navbar-container .container .left-content .menu ul li .navigatorMenu {
+    background-color: #FFF;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px 15px;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+  .navbar-container .container .left-content .menu ul li .navigatorMenu li a {
+    color: black;
+    display: block;
+  }
+  .navbar-container .container .left-content .menu ul li:hover .navigatorMenu {
+    display: flex;
+  }
+  .navbar-container .container .left-content .menu ul li:hover .navigatorMenu li a:hover {
+    color: #3d3d3d;
+  }
+  .navbar-container .container .right-content button {
+    border: 1px solid transparent;
+    background-color: #89cd12;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font: normal 1em "Roboto", sans-serif;
+    transition: 100ms ease-in-out;
+  }
+  .navbar-container .container .right-content button:hover {
+    background-color: #85C01F;
+  }
+  .login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F1F3F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 100ms ease-in-out;
+  }
+  .login-container i {
+    position: fixed;
+    top: 75px;
+    right: 75px;
+    border: 1px solid #707070;
+    color: #707070;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .login-container .otherP {
+    position: fixed;
+    font: normal 0.9rem "Roboto", sans-serif;
+    bottom: 50px;
+    color: #707070;
+  }
+  .login-container .container {
+    background-color: #FFF;
+    padding: 10px 20px;
+  }
+  .login-container .container .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .login-container .container .content span {
+    max-width: 300px;
+    text-align: center;
+    font: normal 1rem "Roboto", sans-serif;
+    color: #707070;
+  }
+  .login-container .container .content h1 {
+    font: 700 2rem "Roboto", sans-serif;
+  }
+  .login-container .container .content * {
+    margin: 10px 0;
+  }
+  .login-container .container .content button {
+    padding: 15px 60px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .login-container .container .content button.firstButton {
+    background-color: #4B8AF9;
+    font: normal 1rem "Roboto", sans-serif;
+    color: white;
+  }
+  .login-container .container .content button.secondButton {
+    background-color: transparent;
+    border: 1px solid #4B8AF9;
+    font: normal 1rem "Roboto", sans-serif;
+    color: #4B8AF9;
+  }
+  .login-container.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .favorite-container .container h3 {
+    font: bold 1rem "Roboto", sans-serif;
+    text-transform: uppercase;
+    padding: 25px 0;
+  }
+  .favorite-container .container .products-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    height: 90vh;
+  }
+  .favorite-container .container .products-container img {
+    max-width: 350px;
+  }
+  .favorite-container .container .products-container span {
+    font: normal 1rem "Roboto", sans-serif;
+  }
+  .footer-container {
+    background-color: #F1F3F7;
+  }
+  .footer-container .container {
+    padding-top: 10px;
+  }
+  .footer-container .container .topp-container {
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  .footer-container .container .topp-container .left-content span {
+    cursor: pointer;
+    font: normal 1rem "Roboto", sans-serif;
+    transition: 100ms ease-in-out;
+  }
+  .footer-container .container .topp-container .left-content span:hover {
+    color: #CA1016;
+  }
+  .footer-container .container .topp-container .right-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-container .container .topp-container .right-content span {
+    cursor: pointer;
+    font: normal 1.1rem "Roboto", sans-serif;
+    transition: 100ms ease-in-out;
+    color: #8D94AD;
+  }
+  .footer-container .container .topp-container .right-content span:hover {
+    color: #CA1016;
+  }
+  .footer-container .container .middle-container {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-container .container .middle-container span {
+    font: normal 0.85rem "Roboto", sans-serif;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+  }
+  .footer-container .container .middle-container span:hover {
+    color: #CA1016;
+  }
+  footer {
+    background-color: #CA1016;
+    padding: 20px 0;
+  }
+  footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+  }
+  footer .container .left-content {
+    max-width: 400px;
+  }
+  footer .container .left-content span {
+    font: normal 0.8rem "Roboto", sans-serif;
+  }
+  footer .container .right-content span {
+    font: normal 1rem "Roboto", sans-serif;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

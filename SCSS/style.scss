@@ -1,0 +1,370 @@
+/*--------Primary Values--------*/
+$primary-color: #CA1016;
+$second-color: #8D94AD;
+$primary-transition: 100ms ease-in-out;
+$primary-font: 'Roboto', sans-serif;
+/*------------------------------*/
+
+/*--------Mixin Values--------*/
+@mixin flexContainer($justify-content){
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+}
+/*----------------------------*/
+
+// Standart Container
+.container {
+    max-width: 968px;
+    margin: auto;
+}
+
+@media screen and (min-width: 968px) {
+// Top Container (PC) SCSS
+.top-container{
+    background-color: #FFF;
+    .container {
+        width: 968px;
+        margin: auto;
+        @include flexContainer(space-between);
+        padding: 10px 0;
+        
+        .left-content {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            
+            span {
+                cursor: pointer;
+                color: $second-color;
+                font: normal 1rem $primary-font;
+                transition: $primary-transition;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+        .right-content {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            .otherSpan, p {
+                color: #000;
+                font: normal 1rem $primary-font;
+            }
+            span {
+                cursor: pointer;
+                color: $second-color;
+                font: normal 1rem $primary-font;
+                transition: $primary-transition;
+
+                i {
+                    margin-right: 5px;
+                }
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            a {
+                cursor: pointer;
+                color: $second-color;
+                font: normal 1rem $primary-font;
+                transition: $primary-transition;
+
+                i {
+                    margin-right: 5px;
+                }
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+// Navbar Container (PC) SCSS
+.navbar-container {
+    background-color: $primary-color;
+    .container {
+        padding: 10px 0;
+        @include flexContainer(space-between);
+
+        .left-content {
+            display: flex;
+            align-items: center;
+
+            .logo {
+
+                a {
+                    color: #FFF;
+                    font: 700 1.2em $primary-font;
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+            }
+
+            .menu {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+            
+                    li {
+                        position: relative; 
+            
+                        a {
+                            color: #FFF;
+                            font: normal 1em $primary-font;
+                            transition: $primary-transition;
+            
+                            &:hover {
+                                color: #d7d7d7;
+                            }
+                        }
+            
+                        .navigatorMenu {
+                            background-color: #FFF;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            display: none;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            border-radius: 10px;
+                            padding: 10px 15px;
+                            white-space: nowrap;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            z-index: 100;
+            
+                            li a {
+                                color: black;
+                                display: block;
+                            }
+                        }
+            
+                        &:hover .navigatorMenu {
+                            display: flex; 
+
+                            li {
+                                a:hover {
+                                    color: #3d3d3d;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .right-content {
+            button {
+                border: 1px solid transparent;
+                background-color: #89cd12;
+                color: white;
+                padding: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                font: normal 1em $primary-font;
+                transition: $primary-transition;
+                &:hover {
+                    background-color: #85C01F;
+                }
+            }
+        }
+    }
+}
+
+.login-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: #F1F3F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    visibility: hidden; 
+    opacity: 0;
+    transition: $primary-transition;
+
+    i {
+        position: fixed;
+        top: 75px;
+        right: 75px;
+        border: 1px solid #707070;
+        color: #707070;
+        padding: 10px 12px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .otherP {
+        position: fixed;
+        font: normal .9rem $primary-font;
+        bottom: 50px;
+        color: #707070;
+    }
+
+    .container {
+        background-color: #FFF;
+        // box-shadow: 0 0 1px #333;
+        // width: 400px;
+        padding: 10px 20px;
+        .content {
+            @include flexContainer(center);
+            flex-direction: column;
+            padding: 20px;
+
+            span {
+                max-width: 300px;
+                text-align: center;
+                font: normal 1rem $primary-font;
+                color: #707070;
+            }
+
+            h1 {
+                font: 700 2rem $primary-font;
+            }
+
+            * {
+                margin: 10px 0;
+            }
+            
+            button {
+                padding: 15px 60px;
+                border: 1px solid transparent;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &.firstButton {
+                    background-color: #4B8AF9;
+                    font: normal 1rem $primary-font;
+                    color: white;
+                }
+
+                &.secondButton {
+                    background-color: transparent;
+                    border: 1px solid #4B8AF9;
+                    font: normal 1rem $primary-font;
+                    color: #4B8AF9;
+                }
+            }
+        }
+    }
+    
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+// Bookmark (PC) SCSS
+.favorite-container {
+    .container {
+        h3 {
+            font: bold 1rem $primary-font;
+            text-transform: uppercase;
+            padding: 25px 0;
+        }
+        
+        .products-container {
+            width: 100%;
+            @include flexContainer(center);
+            flex-direction: column;
+            background-color: #FAFAFA;
+            height: 90vh;
+            img {
+                max-width: 350px;
+            }
+            span {
+                font: normal 1rem $primary-font;
+            }
+        }
+    }
+}
+
+// Footer Container and Footer (PC) SCSS
+.footer-container {
+    background-color: #F1F3F7;
+
+    .container {
+        padding-top: 10px;
+
+        .topp-container {
+            border-top: 1px solid #CCC;
+            border-bottom: 1px solid #CCC;
+            @include flexContainer(space-between);
+            padding: 20px 0;
+            .left-content {
+                span {
+                    cursor: pointer;
+                    font: normal 1rem $primary-font;
+                    transition: $primary-transition;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+            .right-content {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                span {
+                    cursor: pointer;
+                    font: normal 1.1rem $primary-font;
+                    transition: $primary-transition;
+                    color: $second-color;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .middle-container {
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            span {
+                font: normal .85rem $primary-font;
+                cursor: pointer;
+                transition: $primary-transition;
+                &:hover {
+                    color: $primary-color;
+                }
+
+            }
+        }
+    }
+}
+footer {
+    background-color: $primary-color;
+    padding: 20px 0;
+    .container {
+        @include flexContainer(space-between);
+        color: #FFF;
+
+        .left-content {
+            max-width: 400px;
+            span {
+                font: normal .8rem $primary-font;
+            }
+        }
+
+        .right-content {
+            span {
+                font: normal 1rem $primary-font;
+            }
+        }
+    }
+}
+}
