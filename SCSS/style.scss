@@ -88,7 +88,7 @@ $primary-font: 'Roboto', sans-serif;
 .navbar-container {
     background-color: $primary-color;
     .container {
-        padding: 10px 0;
+        padding: 20px 0;
         @include flexContainer(space-between);
 
         .left-content {
@@ -160,7 +160,7 @@ $primary-font: 'Roboto', sans-serif;
         }
 
         .right-content {
-            button {
+            a {
                 border: 1px solid transparent;
                 background-color: #89cd12;
                 color: white;
@@ -363,6 +363,447 @@ footer {
         .right-content {
             span {
                 font: normal 1rem $primary-font;
+            }
+        }
+    }
+}
+
+// Product Container (PC) SCSS
+.product-container {
+    font-family: $primary-font;
+    .container {
+
+        .top-text {
+            background-color: #F1F3F7;
+            padding: 20px 40px;
+
+            span {
+                font: bold 1rem $primary-font;
+            }
+        }
+        .text-content {
+            padding: 20px 40px;
+            ul {
+                li {
+                    list-style: disc;
+                    font: normal .9rem/1.3rem Helvetica, sans-serif;
+                    
+                }
+            }
+        }
+        .inputs-container {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            gap: 50px;
+            font: normal .9em $primary-font;
+            * {
+                margin: 5px 0;
+            }
+            .left-content, .right-content {
+                width: 50%;
+                .inputs {
+                    display: flex;
+                    align-items: center;
+                    .text {width: 40%}
+                    .select-area { width: 60%}
+                    .text, .select-area {
+
+                        select {
+                            width: 300px;
+                            padding: 5px;
+                            outline: none;
+                            border: 1px solid #cecece;
+                            border-radius: 5px;
+                        }
+
+                        span {
+                            color: $primary-color;
+                        }
+
+                        input[type="text"] {
+                            width: 100px;
+                            padding: 5px;
+                            outline: none;
+                            border: 1px solid #cecece;
+                            border-radius: 5px;
+                        }
+
+                        .checks {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
+                    }
+                }
+
+            }
+
+            .right-content {
+                .inputs {
+                    .select-area {
+                        input {
+                            width: 300px!important;
+                        }
+                    }
+                }
+            }
+
+            input[type="radio"]{
+                width: 20px;
+                height: 20px;
+                appearance: none;
+                border: 1px solid #8d8d8d;
+                background-color: #F3F3F3;
+                border-radius: 50%;
+                position: relative;
+                
+                &:checked::before {
+                    content: "";
+                    width: 13px;
+                    height: 13px;
+                    background-color: $primary-color;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }   
+        .info-content {
+            font: normal .9em $primary-font;
+            .content {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                .text {
+                    width: 20%;
+                }
+                .inputs {
+                    width: 80%;
+                }
+                .otherInputs {
+                    display: flex;
+                    flex-direction: column;
+                    .firstInt {
+                        display: flex;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        margin: 10px 0 0 15px;
+                        width: 80%;
+                        font: normal .85em  $primary-font;
+                        color: $second-color;
+                    }
+                }
+
+                input[type="radio"]{
+                    width: 15px;
+                    height: 15px;
+                    appearance: none;
+                    border-radius: 5px;
+                    border: 1px solid #8d8d8d;
+                    background-color: #F3F3F3;
+                    position: relative;
+                    
+                    &:checked::before {
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 3px;
+                        background-color: $primary-color;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            .secondCont {
+                margin: 25px 0;
+
+                .inputs {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    
+                input[type="radio"]{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    
+                    &:checked::before {
+                        content: "";
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 3px;
+                    }
+                }
+                }
+            }
+
+            .thirdCont {
+                margin: 25px 0;
+                * {
+                    margin: 5px 0;
+                }
+                .inputs {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    span {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                    input[type="radio"]{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 5px;
+                        
+                        &:checked::before {
+                            content: "";
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+            }
+
+            .fourthCont {
+                
+                .inputs {
+                    position: relative;
+                    input {
+                        width: 300px;
+                        padding: 5px;
+                        outline: none;
+                        border: 1px solid #cecece;
+                        border-radius: 5px;
+                        margin-right: 10px;
+                    }
+                    span {
+                        cursor: pointer;
+                        color: #0655ff;
+                        transition: $primary-transition;
+                        position: relative;
+
+                        &:hover + p {
+                            display: block;
+                        }
+                    }
+
+                    p {
+                        display: none;
+                        position: absolute;
+                        right: 200px;
+                        bottom: 30px;
+                        width: 300px;
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .lastCont {
+                margin: 25px 0;
+
+                .inputs {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    textarea {
+                        width: 100%;
+                        height: 100px;
+                        border-radius: 5px;
+                        border: 1px solid #cecece;
+                        outline: none;
+                        padding: 5px 10px;
+                    }
+                    span {
+                        font: normal 1em $primary-font;
+                        color: gray;
+                    }
+                }
+            }
+        }
+        .avto-content {
+            .inputs {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: row;
+                gap: 20px;
+                padding: 10px 0;
+                * {
+                    margin: 5px 0;
+                }
+                div {
+                    width: 100%;
+                }
+                .align-items-center {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                input[type="radio"]{
+                    width: 20px;
+                    height: 20px;
+                    appearance: none;
+                    border-radius: 5px;
+                    border: 1px solid #8d8d8d;
+                    background-color: #F3F3F3;
+                    position: relative;
+                    
+                    &:checked::before {
+                        content: "";
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 3px;
+                        background-color: $primary-color;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+        .gallery-content {
+            padding: 20px 0;
+            .info-content {
+                background-color: #F6F7FA;
+                padding: 10px 15px;
+                margin: 10px;
+                border-radius: 5px;
+
+                p {
+                    color: $primary-color;
+                    margin-bottom: 5px;
+                }
+            }
+            .photo-upload {
+                display: flex;
+                align-items: flex-start;
+                .first, .second, .third {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 10px;
+                    color: $second-color;
+                    font: normal .9em $primary-font;
+                }
+                input {
+                    display: none;
+                }
+                label {
+                    display: flex;  
+                    align-items: center;  
+                    justify-content: center; 
+                    text-align: center; 
+                    height: 150px;
+                    width: 200px;
+                    border-radius: 6px;
+                    border: 1px solid #F3F3F3;
+                    transition: $primary-transition;
+                    line-height: normal;  
+                    margin-right: 10px;
+                    color: blue;
+                
+                
+                    
+                    transition: $primary-transition;
+                    &:hover {
+                        color: blue;
+                        border: 1px solid blue;
+                    }
+                }
+                .other {
+                    background: url('../assets/on.png') center/cover;
+                }
+            }
+        }
+        .contact-container {
+            padding: 20px 0;
+            // font: normal .9em $primary-font;
+            // .content {
+            //     width: 100%;
+            //     display: flex;
+            //     align-items: flex-start;
+            //     .text {
+            //         width: 20%;
+            //     }
+            //     .inputs {
+            //         width: 80%;
+            //     }
+
+            .contact-top-text {
+                margin: 10px 0;
+                span {
+                    font: normal .9em $primary-font;
+                    color: gray;
+                }
+            }
+            .input {
+                display: flex;
+                align-items: center;
+                .partFirst {
+                    margin: 10px 0;
+                    width: 20%;
+                    span {
+                        color: $primary-color;
+                    }
+                }
+                .partSecond {
+                    margin: 10px 0;
+                    width: 60%;
+                    input, select {
+                        width: 300px;
+                        padding: 5px;
+                        outline: none;
+                        border: 1px solid #cecece;
+                        border-radius: 5px;
+                    }
+                }
+                .other {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    span {
+                        font: normal .9em $primary-font;
+                        color: gray;
+                    }
+                }
+
+                button {
+                    width: 300px;
+                    outline: none;
+                    background-color: $primary-color;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    padding: 10px;
+                    font: normal 1em $primary-font;
+                    color: #FFF;
+                    transition: $primary-transition;
+                    &:active {
+                        scale: .9;
+                    }
+                }
+            }
+            .alt-text {
+                font: normal .9em $primary-font;
+                color: $second-color;
+                margin: 10px 0;
+                span {
+                    color: blue;
+                    text-decoration: underline;
+                }
             }
         }
     }
