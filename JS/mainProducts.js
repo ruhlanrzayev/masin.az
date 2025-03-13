@@ -1382,7 +1382,7 @@ function renderFavoriteProducts() {
               ${product.credit ? '<i class="fa-solid fa-percent percent"></i>' : ''}
               ${product.barter ? '<i class="fa-solid fa-arrows-spin arrow"></i>' : ''}
             </div>
-            <i class="fa-solid fa-heart heart" onclick="addFavorite(${product.id})"></i>
+            <i class="fa-solid fa-heart heart" onclick="event.stopPropagation(); addFavorite(${product.id})"></i>
           </div>
           <img src="${product.images}" alt="car img">
         </div>
