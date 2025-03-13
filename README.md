@@ -1,6 +1,6 @@
 # Turbo.az Clone - Car Buying & Selling Website (Frontend Only)
 
-This project is a **Turbo.az clone**, a frontend-only web application that replicates the interface of Azerbaijan's leading car marketplace. It allows users to browse, search, and list cars with a visually appealing and responsive design.
+This project is a **Turbo.az clone**, a frontend-only web application that replicates the interface of Azerbaijan's leading car marketplace. It allows users to browse, search, and list cars with a visually appealing.
 
 ## Features
 
